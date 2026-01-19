@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>5 cent sundays - Official Website</title>
+<style>
+body {
+    background-image: url("stars.webp");
+    background-repeat: repeat;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.0);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+.section-title {
+    color: #ff6600;
+}
+
+.streaming-links, .watch-links, .follow-links {
+    margin-top: 20px;
+}
+
+.streaming-links a, .watch-links a, .follow-links a, .menu a {
+    display: inline-block;
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+}
+
+.streaming-links img, .watch-links img, .follow-links img {
+    width: 60px;
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.menu {
+    margin-top: 20px;
+}
+
+footer {
+    margin-top: 50px;
+    color: #999;
+}
+
+#header-image {
+    width: 100%;
+    height: auto;
+}
+
+#hit-counter {
+    font-size: 1.2em;
+    color: white;
+    margin-top: 20px;
+}
+
+#webamp-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: none;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+    <img id="header-image" src="index_files/5csvfdgood.png" alt="5 CENT SUNDAYS">
+    <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="merch.html">Merch</a>
+        <a href="about.html">Shows</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <h2 class="section-title">STREAM</h2>
+    <div class="streaming-links">
+        <a href="https://web.archive.org/web/20250118012336/https://open.spotify.com/artist/3IkI6PFiZhhftLQt61bQrs?si=nU4LUJ7ORTi4_xteEHysMg&amp;nd=1&amp;dlsi=1ff35a95e0dd47ee" target="_blank">
+            <img src="index_files/spotify-photo-of-logo-16.png" alt="Spotify Icon">Listen on Spotify
+        </a>
+        <a href="https://music.apple.com/us/artist/5-cent-sundays/1700019026" target="_blank">
+            <img src="index_files/Apple_Music_logo.png" alt="Apple Music Icon">Listen on Apple Music
+        </a>
+        <a href="https://tidal.com/browse/artist/41020015" target="_blank">
+            <img src="index_files/Tidal-Icon.png" alt="Tidal Icon">Listen on Tidal
+        </a>
+        <a href="https://web.archive.org/web/20250118012336/https://music.youtube.com/channel/UCi1_CwZ8OF2ciHD0Z0itHRA?si=PkKtzyR_AyCQHwa3" target="_blank">
+            <img src="index_files/youtube-music-logo-10.png" alt="YouTube Music Icon">Listen on YouTube Music
+        </a>
+        <a href="https://web.archive.org/web/20250118012336/https://amazon.com/music/player/artists/B0CD53RNKF/5-cent-sundays?marketplaceId=ATVPDKIKX0DER&amp;musicTerritory=US&amp;ref=dm_sh_HMQRUO8izNkAWql0vrZlG8yVW" target="_blank">
+            <img src="index_files/amazonmusic-702x700-1-600x600.png" alt="Amazon Music Icon">Listen on Amazon Music
+        </a>
+        <a href="#" id="stream-free-link">
+            <img src="index_files/cd.gif" alt="Free Stream Icon">Listen for Free (Web Player)
+        </a>
+    </div>
+
+    <h2 class="section-title">WATCH</h2>
+    <div class="watch-links">
+        <a href="https://web.archive.org/web/20250118012336/https://www.youtube.com/@5-cent-sundays" target="_blank">
+            <img src="index_files/di9XonMjT.png" alt="YouTube Icon">Watch on YouTube
+        </a>
+    </div>
+
+    <br><br>
+    <h2 class="section-title">FOLLOW</h2>
+    <div class="follow-links">
+        <a href="https://web.archive.org/web/20250118012336/https://www.instagram.com/5_cent_sundays/" target="_blank">
+            <img src="index_files/instagram-logo-instagram-icon-transparent-free-png.png" alt="">Follow on Instagram
+        </a>
+        <br><br>
+        <img src="index_files/fb.png" alt="">
+        <a href="https://www.facebook.com/profile.php?id=61558158334782" target="_blank">Follow on Facebook</a>
+        <br><br>
+        <img src="index_files/Bandcamp_logo.png" alt="">
+        <a href="https://5centsundays.bandcamp.com/" target="_blank">Follow on Bandcamp</a>
+        <br><br>
+    </div>
+
+    <footer> © 2026 5 Cent Sundays | Chipped Paint Records</footer>
+    <img src="index_files/freecounterstat.png" title="website counter" alt="website counter" border="0">
+</div>
+
+<div id="webamp-container"></div>
+
+<script src="index_files/webamp.bundle.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById('stream-free-link').addEventListener('click', function(event) {
+        event.preventDefault();
+        const webampContainer = document.getElementById('webamp-container');
+        webampContainer.style.display = 'block';
+
+        if (!window.webamp) {
+            window.webamp = new Webamp({
+                initialTracks: [
+                    { metaData: { artist: "5 cent sundays", title: "Into the Wild" }, url: "index_files/music/01intothewild.mp3", duration: 207 },
+                    { metaData: { artist: "5 cent sundays", title: "Damage" }, url: "index_files/music/02damage.mp3", duration: 247 },
+                    { metaData: { artist: "5 cent sundays", title: "Barricade" }, url: "index_files/music/03barricade.mp3", duration: 196 },
+                    { metaData: { artist: "5 cent sundays", title: "Cast Iron" }, url: "index_files/music/04castiron.mp3", duration: 240 },
+                    { metaData: { artist: "5 cent sundays", title: "Thirst Trap" }, url: "index_files/music/05thirsttrap.mp3", duration: 232 },
+                    { metaData: { artist: "5 cent sundays", title: "Burden" }, url: "index_files/music/06burden.mp3", duration: 204 },
+                    { metaData: { artist: "5 cent sundays", title: "Meteors" }, url: "index_files/music/07meteors.mp3", duration: 238 },
+                    { metaData: { artist: "5 cent sundays", title: "In the Flesh" }, url: "index_files/music/08intheflesh.mp3", duration: 225 },
+                    { metaData: { artist: "5 cent sundays", title: "Separate" }, url: "index_files/music/09separate.mp3", duration: 322 },
+                    { metaData: { artist: "5 cent sundays", title: "Starstruck" }, url: "index_files/music/10starstruck.mp3", duration: 182 }
+                ],
+                container: webampContainer
+            });
+
+            window.webamp.renderWhenReady(webampContainer);
+        }
+    });
+});
+</script>
+
+</body>
+</html>
