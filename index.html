@@ -1,7 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>5 cent sundays - Official Website</title>
+
 <style>
 body {
     background-image: url("stars.webp");
@@ -16,82 +20,114 @@ body {
 }
 
 .container {
-    max-width: 800px;
-    margin: 100px auto;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.0);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 900px;
+    margin: clamp(40px, 8vw, 100px) auto;
+    padding: clamp(15px, 4vw, 30px);
 }
 
-h1 {
-    font-size: 3em;
+h1, h2 {
+    font-size: clamp(1.8rem, 4vw, 3rem);
     margin-bottom: 20px;
 }
 
 p {
-    font-size: 1.2em;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
 }
 
 .section-title {
     color: #ff6600;
-}
-
-.streaming-links, .watch-links, .follow-links {
-    margin-top: 20px;
-}
-
-.streaming-links a, .watch-links a, .follow-links a, .menu a {
-    display: inline-block;
-    margin-right: 20px;
-    text-decoration: none;
-    color: white;
-    font-size: 1.2em;
-}
-
-.streaming-links img, .watch-links img, .follow-links img {
-    width: 60px;
-    height: auto;
-    margin-right: 10px;
-    vertical-align: middle;
+    margin-top: 40px;
 }
 
 .menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.streaming-links,
+.watch-links,
+.follow-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
     margin-top: 20px;
 }
 
-footer {
-    margin-top: 50px;
-    color: #999;
+.streaming-links a,
+.watch-links a,
+.follow-links a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.streaming-links img,
+.watch-links img,
+.follow-links img {
+    width: 48px;
+    height: auto;
 }
 
 #header-image {
     width: 100%;
+    max-width: 600px;
     height: auto;
 }
 
-#hit-counter {
-    font-size: 1.2em;
-    color: white;
-    margin-top: 20px;
+footer {
+    margin-top: 60px;
+    color: #999;
+    font-size: 0.9rem;
 }
 
 #webamp-container {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 300px;
-    height: auto;
-    background-color: rgba(0, 0, 0, 0.8);
+    bottom: 20px;
+    left: 20px;
+    width: min(90vw, 300px);
     z-index: 1000;
     display: none;
+}
+
+/* Mobile tweaks */
+@media (max-width: 600px) {
+    .menu {
+        gap: 15px;
+    }
+
+    .streaming-links a,
+    .watch-links a,
+    .follow-links a {
+        width: 100%;
+        justify-content: center;
+    }
+
+    #webamp-container {
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 </style>
 </head>
 
 <body>
+
 <div class="container">
     <img id="header-image" src="index_files/5csvfdgood.png" alt="5 CENT SUNDAYS">
+
     <div class="menu">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -102,82 +138,77 @@ footer {
 
     <h2 class="section-title">STREAM</h2>
     <div class="streaming-links">
-        <a href="https://open.spotify.com/artist/4XXBHwh4hKUOgiJgatHhTl?si=qw-EfFjGRsG4dGPmkF5dbw" target="_blank">
-            <img src="index_files/spotify-photo-of-logo-16.png" alt="Spotify Icon">Listen on Spotify
+        <a href="https://open.spotify.com/artist/4XXBHwh4hKUOgiJgatHhTl" target="_blank">
+            <img src="index_files/spotify-photo-of-logo-16.png">Spotify
         </a>
         <a href="https://music.apple.com/us/artist/5-cent-sundays/1700019026" target="_blank">
-            <img src="index_files/Apple_Music_logo.png" alt="Apple Music Icon">Listen on Apple Music
+            <img src="index_files/Apple_Music_logo.png">Apple Music
         </a>
         <a href="https://tidal.com/browse/artist/41020015" target="_blank">
-            <img src="Tidal-icon.png" alt="Tidal Icon">Listen on Tidal
+            <img src="Tidal-icon.png">Tidal
         </a>
-        <a href="https://music.youtube.com/channel/UCi1_CwZ8OF2ciHD0Z0itHRA?si=PkKtzyR_AyCQHwa3" target="_blank">
-            <img src="index_files/youtube-music-logo-10.png" alt="YouTube Music Icon">Listen on YouTube Music
+        <a href="https://music.youtube.com/channel/UCi1_CwZ8OF2ciHD0Z0itHRA" target="_blank">
+            <img src="index_files/youtube-music-logo-10.png">YouTube Music
         </a>
-        <a href="https://amazon.com/music/player/artists/B0CD53RNKF/5-cent-sundays?marketplaceId=ATVPDKIKX0DER&amp;musicTerritory=US&amp;ref=dm_sh_HMQRUO8izNkAWql0vrZlG8yVW" target="_blank">
-            <img src="index_files/amazonmusic-702x700-1-600x600.png" alt="Amazon Music Icon">Listen on Amazon Music
+        <a href="https://amazon.com/music/player/artists/B0CD53RNKF/5-cent-sundays" target="_blank">
+            <img src="index_files/amazonmusic-702x700-1-600x600.png">Amazon
         </a>
         <a href="#" id="stream-free-link">
-            <img src="index_files/cd.gif" alt="Free Stream Icon">Listen for Free (Web Player)
+            <img src="index_files/cd.gif">Listen Free
         </a>
     </div>
 
     <h2 class="section-title">WATCH</h2>
     <div class="watch-links">
         <a href="https://www.youtube.com/@5-cent-sundays" target="_blank">
-            <img src="index_files/di9XonMjT.png" alt="YouTube Icon">Watch on YouTube
+            <img src="index_files/di9XonMjT.png">YouTube
         </a>
     </div>
 
-    <br><br>
     <h2 class="section-title">FOLLOW</h2>
     <div class="follow-links">
         <a href="https://www.instagram.com/5_cent_sundays/" target="_blank">
-            <img src="index_files/instagram-logo-instagram-icon-transparent-free-png.png" alt="">Follow on Instagram
+            <img src="index_files/instagram-logo-instagram-icon-transparent-free-png.png">Instagram
         </a>
-        <br><br>
-        <img src="index_files/fb.png" alt="">
-        <a href="https://www.facebook.com/profile.php?id=61558158334782" target="_blank">Follow on Facebook</a>
-        <br><br>
-        <img src="index_files/Bandcamp_logo.png" alt="">
-        <a href="https://5centsundays.bandcamp.com/" target="_blank">Follow on Bandcamp</a>
-        <br><br>
+        <a href="https://www.facebook.com/profile.php?id=61558158334782" target="_blank">
+            <img src="index_files/fb.png">Facebook
+        </a>
+        <a href="https://5centsundays.bandcamp.com/" target="_blank">
+            <img src="index_files/Bandcamp_logo.png">Bandcamp
+        </a>
     </div>
 
-    <footer> © 2026 5 Cent Sundays | Chipped Paint Records</footer>
-    <img src="index_files/freecounterstat.png" title="website counter" alt="website counter" border="0">
+    <footer>© 2026 5 Cent Sundays | Chipped Paint Records</footer>
+    <img src="index_files/freecounterstat.png" alt="counter">
 </div>
 
 <div id="webamp-container"></div>
 
 <script src="index_files/webamp.bundle.min.js"></script>
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById('stream-free-link').addEventListener('click', function(event) {
-        event.preventDefault();
-        const webampContainer = document.getElementById('webamp-container');
-        webampContainer.style.display = 'block';
+document.getElementById('stream-free-link').addEventListener('click', function(e) {
+    e.preventDefault();
+    const c = document.getElementById('webamp-container');
+    c.style.display = 'block';
 
-        if (!window.webamp) {
-            window.webamp = new Webamp({
-                initialTracks: [
-                    { metaData: { title: "Into the Wild" }, url: "index_files/music/01intothewild.mp3", duration: 207 },
-                    { metaData: { title: "Damage" }, url: "index_files/music/02damage.mp3", duration: 247 },
-                    { metaData: { title: "Barricade" }, url: "index_files/music/03barricade.mp3", duration: 196 },
-                    { metaData: { title: "Cast Iron" }, url: "index_files/music/04castiron.mp3", duration: 240 },
-                    { metaData: { title: "Thirst Trap" }, url: "index_files/music/05thirsttrap.mp3", duration: 232 },
-                    { metaData: { title: "Burden" }, url: "index_files/music/06burden.mp3", duration: 204 },
-                    { metaData: { title: "Meteors" }, url: "index_files/music/07meteors.mp3", duration: 238 },
-                    { metaData: { title: "In the Flesh" }, url: "index_files/music/08intheflesh.mp3", duration: 225 },
-                    { metaData: { title: "Separate" }, url: "index_files/music/09separate.mp3", duration: 322 },
-                    { metaData: { title: "Starstruck" }, url: "index_files/music/10starstruck.mp3", duration: 182 }
-                ],
-                container: webampContainer
-            });
-
-            window.webamp.renderWhenReady(webampContainer);
-        }
-    });
+    if (!window.webamp) {
+        window.webamp = new Webamp({
+            initialTracks: [
+                { metaData: { title: "Into the Wild" }, url: "index_files/music/01intothewild.mp3" },
+                { metaData: { title: "Damage" }, url: "index_files/music/02damage.mp3" },
+                { metaData: { title: "Barricade" }, url: "index_files/music/03barricade.mp3" },
+                { metaData: { title: "Cast Iron" }, url: "index_files/music/04castiron.mp3" },
+                { metaData: { title: "Thirst Trap" }, url: "index_files/music/05thirsttrap.mp3" },
+                { metaData: { title: "Burden" }, url: "index_files/music/06burden.mp3" },
+                { metaData: { title: "Meteors" }, url: "index_files/music/07meteors.mp3" },
+                { metaData: { title: "In the Flesh" }, url: "index_files/music/08intheflesh.mp3" },
+                { metaData: { title: "Separate" }, url: "index_files/music/09separate.mp3" },
+                { metaData: { title: "Starstruck" }, url: "index_files/music/10starstruck.mp3" }
+            ],
+            container: c
+        });
+        window.webamp.renderWhenReady(c);
+    }
 });
 </script>
 
